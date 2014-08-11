@@ -1,0 +1,199 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+$fa-font-path: "/assets/fonts" !default;
+$gf-font-path: "/assets/fonts" !default;
+$tfr-red: #EC2727;
+$tfr-grey: #333333;
+
+//TODO: Get correct color
+$tfr-blue: rgb(25, 179, 213);
+
+$fontAwesomePath: '/assets/fonts';
+@import 'vendor/font-awesome/scss/font-awesome';
+
+@import 'mixins';
+@import 'base';
+@import 'bandsintown';
+@import 'wordpress';
+@import 'fonts';
+@import 'header';
+
+section h2 {
+	font-family:'Conv_steeltongs_regular',Sans-Serif;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+/* end wordpress */
+/* Space out content a bit */
+body {
+	padding: 10px 0;
+	background-color: white;
+}
+
+circle.red {
+	fill: $tfr-red;
+}
+.red {
+	color: $tfr-red;
+}
+html, body {
+	height: 100%;
+	background-color: black;
+}
+.container {
+	width:750px;
+	background-color: black;
+	height:100%;
+	padding: 0px;
+}
+#header {
+	width: 100%;
+	text-align:center;
+	z-index: 1;
+}
+
+#tour-dates, #store, #news {
+  h2 {
+    margin: 0;
+  }
+}
+#store {
+  padding: 40px 0 0 0;
+}
+
+#news {
+  padding: 40px 0;
+}
+
+#logo {
+	position: relative;
+	display: inline-block;
+	width: 500px;
+}
+.circle {
+	position: absolute;
+	text-align:center;
+	@extend .clear-fix;
+}
+.header-text {
+	position: absolute;
+	font-family:'Conv_steeltongs_regular',Sans-Serif;
+	color: #FFFFFF;
+	top: 40px;
+	left: 10px;
+	font-size:6.8em;
+}
+nav {
+	position: absolute;
+	z-index: 2;
+}
+nav i {
+	margin-right: 5px;
+}
+.fa {
+	color: #FFFFFF;
+	text-align:right;
+	width:35px;
+}
+nav a {
+	color:#000000;
+	font-family:'Conv_steeltongs_regular',Sans-Serif;
+	text-transform: uppercase;
+	margin: 5px;
+	font-size:1.33em;
+	display:block;
+}
+nav a span {
+	margin-bottom:2px;
+	display:inline-block;
+}
+nav a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+section a {
+	float:none !important;
+}
+section a, footer a {
+	float: right;
+	font-family: 'Conv_steeltongs_regular',Sans-Serif;
+	text-transform: uppercase;
+	font-size: 1.33em;
+	color: #FFFFFF;
+	line-height: 0.5;
+	height: 70px;
+}
+section a:hover, footer a:hover{ 
+	color: #FFFFFF;
+}
+footer i {
+	margin-left: 5px;
+}
+// // iPhone 5s
+// @media screen and (device-aspect-ratio: 2/3) {}
+
+// //iPhone 5:
+// @media screen and (device-aspect-ratio: 40/71) {
+// 	.container {
+// 		width: 480px
+// 	}
+// 	nav {
+// 		color: red;
+// 	}
+// }
+@media only screen and (max-width: 560px) {
+	.container {
+		width: 560px
+	}
+
+	#header-container {
+		position: relative;
+
+		nav {
+			position: relative;
+			background-color: $tfr-blue;//$tfr-red;
+
+			@extend .clear-fix;
+		}
+		
+		nav a {
+			display:inline-block;
+			color: white;
+			&:hover, &:hover i {
+				color: black;
+			}
+		}
+		
+		#header {
+			margin: 70px 0 40px 0;
+			@extend .clear-fix;
+
+			#contact {
+				right: 0px;
+				bottom: 0px;
+				position: absolute;
+
+				a {
+					font-family: 'Conv_steeltongs_regular',Sans-Serif;
+					text-transform: uppercase;
+					color: $tfr-blue;
+					text-decoration: underline;
+
+					span {
+						display: inline-block;
+						font-size: 1.5em;
+						line-height: 1.25em;
+						padding: 0 5px 0 0;
+						margin: 0;
+					}
+					i.fa {
+						padding: 5px 0;
+						display:inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+// //iPad:
+// @media screen and (device-aspect-ratio: 3/4) {}

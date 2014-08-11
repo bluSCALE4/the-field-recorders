@@ -1,0 +1,10 @@
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+	color: white;
+	font-family:'Conv_steeltongs_regular',Sans-Serif;
+	text-transform: uppercase;
+}
+
+h2 {
+	background-color: $tfr-blue;
+	padding: 10px 4px;
+}

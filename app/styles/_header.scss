@@ -1,0 +1,40 @@
+#header-container {
+	position: relative;
+	@extend .clear-fix;
+
+	#header {
+		position: relative;
+		margin-bottom:40px;
+		@extend .clear-fix;
+
+		nav {
+			@extend .clear-fix;
+		}
+
+		#contact {
+			right: 0px;
+			bottom: 0px;
+			position: absolute;
+
+			a {
+		    	font-family: 'Conv_steeltongs_regular',Sans-Serif;
+		    	text-transform: uppercase;
+				color: $tfr-blue;
+				text-decoration: underline;
+					
+				span {
+					display: inline-block;
+					font-size: 1.5em;
+					line-height: 1.25em;
+					padding: 0 5px 0 0;
+					margin: 0;
+				}
+				i.fa {
+					padding: 5px 0;
+					display:inline-block;
+					width: 60px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+#tour-dates {   
+	margin: 0 auto;
+    display: block;
+    color: white;
+
+	#bit-events {
+		&, .bit-events {
+
+			tr {
+				th {
+					padding: 15px 0;
+					border-top: 1px solid $tfr-grey !important;
+					border-bottom: 1px solid $tfr-grey;
+
+				}
+				td {
+					padding: 15px 15px 15px 0;
+					border-top: 1px solid $tfr-grey !important;
+					border-bottom: 1px solid $tfr-grey;
+
+					.bit-buy-tix, .bit-event-data {
+			    		color: $tfr-blue !important;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.bit-header-links {
+				.bit-events-nav {
+					color: $tfr-blue;
+					text-decoration: underline;
+					line-height: 1em;
+				}
+			}
+			.bit-description-links {
+				display: none;
+			}
+			.bit-track-artist-header {
+				border: none;
+				padding: 20px 0 15px 0;
+
+				&:hover .bit-invert {
+					color: black !important;
+				}
+
+				.bit-invert {
+					color: white !important;		    
+			    	background-color: $tfr-blue !important;
+			    	color: white;
+			    	font-family: 'Conv_steeltongs_regular',Sans-Serif !important;
+			    	text-transform: uppercase;
+			    	font-size: 1.5em;
+			    	word-spacing: 0.125em;
+					letter-spacing: 0.07em;
+					padding: 8px 24px;
+				}
+				.bit-notify {
+					padding-top: 15px;
+					color: white;
+				}
+			}
+		}
+		.bit-tickets {
+			a {
+				color: $tfr-red;
+			}
+		}
+		.bit-bottom {
+			display: none;
+		}
+		.bit-notify {
+			color: $tfr-red;	
+		}
+	}
+}
