@@ -16,5 +16,32 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
+var pickFiles = require('broccoli-static-compiler');
+var mergeTrees = require('broccoli-merge-trees');
+var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = app.toTree();
+var app = new EmberApp({
+  name: require('./package.json').name,
+
+  minifyCSS: {
+    enabled: true,
+    options: {}
+  },
+
+  getEnvJSON: require('./config/environment')
+});
+
+var fontTree = pickFiles('vendor/font-awesome/fonts', {
+    srcDir: '/',
+    files: ['fontawesome-webfont.eot','fontawesome-webfont.ttf','fontawesome-webfont.svg','fontawesome-webfont.woff'],
+    destDir: '/assets/fonts'
+});
+
+var gfFontTree = pickFiles('vendor/google-fonts', {
+    srcDir: '/',
+    files: ['steeltongs_regular.eot', 'steeltongs_regular.woff', 'steeltongs_regular.ttf', 'steeltongs_regular.svg'],
+    destDir: '/assets/fonts'
+});
+
+//module.exports = app.toTree();
+module.exports = mergeTrees([app.toTree(), fontTree, gfFontTree]);
