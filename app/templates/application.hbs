@@ -1,3 +1,30 @@
-<h2 id='title'>Welcome to Ember.js</h2>
-
-{{outlet}}
+<div class="container">
+	<div id="header-container">
+		<nav>
+			<a href="https://itunes.apple.com/us/album/the-field-recorders/id731821889" target="_new"><i class="fa fa-2x fa-music"></i> <span>iTunes</span></a>
+			<a href="https://soundcloud.com/thefieldrecorders" 
+			   target="_new"><i class="fa fa-2x fa-cloud"></i> <span>SoundCloud</span></a>
+			<a href="http://instagram.com/thefieldrecorders" 
+			   target="_new"><i class="fa fa-2x fa-instagram"></i> <span>Instagram</span></a>
+			<a href="http://youtu.be/lu_uuKRvsys" target="_new"><i class="fa fa-2x fa-youtube"></i> <span>YouTube</span></a>
+			<a href="https://www.facebook.com/TheFieldRecorders" 
+			   target="_new"><i class="fa fa-2x fa-facebook"></i> <span>Facebook</span></a>
+		</nav>
+		<div id="header">
+			<div id="logo">
+				<div class="circle">
+					<svg width="218" height="218" 
+						 viewPort="0 0 218 218" version="1.1"
+						 xmlns="http://www.w3.org/2000/svg">
+						<circle cx="109" cy="109" r="109" class="red"/>
+					</svg>
+				</div>
+				<h1 class="header-text">THE FIELD <span class="red">REC</span>ORDERS</h1>
+			</div>
+			<div id="contact">
+				<a href="mailto:contact@thefieldrecorders.com?Subject=Booking%20Inquiry"><span>Booking<br/>inquires</span><i class="fa fa-4x fa-envelope"></i></a>
+			</div>
+		</div>
+	</div>
+	{{outlet}}
+</div>
