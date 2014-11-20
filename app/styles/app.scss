@@ -1,5 +1,5 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-$fa-font-path: "/assets/fonts" !default;
+//$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+//$fa-font-path: "/assets/fonts" !default;
 $gf-font-path: "/assets/fonts" !default;
 $tfr-red: #EC2727;
 $tfr-grey: #333333;
@@ -7,8 +7,8 @@ $tfr-grey: #333333;
 //TODO: Get correct color
 $tfr-blue: rgb(25, 179, 213);
 
-$fontAwesomePath: '/assets/fonts';
-@import 'vendor/font-awesome/scss/font-awesome';
+//$fontAwesomePath: '/assets/fonts';
+//@import 'vendor/font-awesome/scss/font-awesome';
 
 @import 'mixins';
 @import 'base';
